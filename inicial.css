@@ -1,11 +1,87 @@
+/* FONTES (GOOGLE FONTS) */
 .tomorrow-light {
-    font-family: "Tomorrow", serif;
-    font-weight: 300;
-    font-style: normal;
-  }
+  font-family: "Tomorrow", serif;
+  font-weight: 300;
+  font-style: normal;
+}
 
-  .tomorrow-bold {
-    font-family: "Tomorrow", serif;
-    font-weight: 700;
-    font-style: normal;
-  }
+.tomorrow-bold {
+  font-family: "Tomorrow", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.titan-one-regular {
+  font-family: "Titan One", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* CONFIGURAÇÕES GERAIS */
+body{
+  margin: 0;
+  background-color: #393840;
+  color: #D9D9D9;
+}
+
+.azul{
+  background-color: blue;
+}
+
+/* HEADER */
+#logo{
+  width: 150px;
+  margin: 30px 0;
+}
+header{
+  text-align: center;
+}
+
+/* MAIN */
+#section-principal{
+  text-align: center;
+  margin: 80px;
+}
+
+#txt-principal{
+  color: white;
+  font-size: 65px;
+  padding: 0 50px;
+  margin-bottom: 0;
+}
+
+#txt-secundario{
+  margin: 5px 0px 80px 0px;
+  font-size: 35px;
+  padding: 0 100px;
+}
+
+button{
+  background-color: #393840;
+  color: #D9D9D9;
+  border: 5px solid #D9D9D9;
+  border-radius: 70px;
+  padding: 10px 80px;
+  font-size: 30px;
+  transition-duration: 0.5s;
+}
+
+button:hover{
+  cursor: pointer;
+  background-color: #46484E;
+  font-size: 35px;
+}
+
+#passo-a-passo{
+  width: 100%;
+  max-width: calc(100% - 300px);
+  margin: 150px;
+  display: block;
+}
+
+/* FOOTER */
+footer{
+  text-align: center;
+  background-color: #46484E;
+  padding: 10px 0; 
+}
