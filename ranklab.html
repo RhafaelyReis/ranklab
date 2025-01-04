@@ -80,7 +80,7 @@
                     const imagemURL = URL.createObjectURL(file);
                     const imagemID = 'img' + new Date().getTime() + i;
 
-                    mostrarImagens.innerHTML += `<img draggable="true" ondragstart="drag(event)" id="${imagemID}" src="${imagemURL}" style="width: 100px; height: 100px; margin: 5px">`
+                    mostrarImagens.innerHTML += `<img draggable="true" ondragstart="drag(event)" id="${imagemID}" src="${imagemURL}" style="width: 100px; height: 100px; margin: 2px 5px">`
                 }
                 
                 inputFile.value = '';
