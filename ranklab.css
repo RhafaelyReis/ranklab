@@ -1,11 +1,150 @@
+/* FONTES (GOOGLE FONTS) */
 .tomorrow-light {
-    font-family: "Tomorrow", serif;
-    font-weight: 300;
-    font-style: normal;
-  }
+  font-family: "Tomorrow", serif;
+  font-weight: 300;
+  font-style: normal;
+}
 
-  .tomorrow-bold {
-    font-family: "Tomorrow", serif;
-    font-weight: 700;
-    font-style: normal;
+.tomorrow-bold {
+  font-family: "Tomorrow", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.titan-one-regular {
+  font-family: "Titan One", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* CONFIGURAÇÕES GERAIS */
+body {
+  margin: 0;
+  background-color: #393840;
+  color: #D9D9D9;
+}
+
+/* HEADER */
+header {
+  text-align: center;
+  padding: 20px 0;
+}
+
+#logo {
+  width: 150px;
+  margin: 30px 0 70px 0;
+}
+
+/* MAIN */
+main{
+  text-align: center;
+}
+
+/* SECTION - RANK */
+#section-rank {
+  text-align: center;
+  padding: 0 20px;
+}
+
+#titulo-rank {
+  color: white;
+  font-size: 45px;
+  padding: 0 20px;
+  margin-bottom: 30px;
+  background-color: #393840;
+  border: none;
+  text-align: center;
+}
+
+.div-img {
+  background-color: #1e1e1e;
+  flex-grow: 1;
+  max-width: calc(100% - 160px);
+  margin: 5px 80px;
+  border-radius: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  min-height: 80px;
+  padding: 10px;
+}
+
+.div-geral{
+  display: flex;
+  justify-content: space-between;
+}
+
+.textarea-titulo {
+  color: #1e1e1e;
+  text-align: center;
+  width: 100px;
+  height: 80px;
+  border-radius: 20px;
+  border: none;
+  padding: 10px;
+  font-size: 20px;
+  margin: 5px -80px 5px 80px;
+  resize: vertical;
+  overflow: hidden;
+}
+
+/* SECTION - IMAGENS */
+#titulo-img {
+  color: white;
+  font-size: 45px;
+  padding: 0 20px;
+  margin: 80px 0 20px 0;
+  text-align: center;
+}
+
+#div-imagem {
+  background-color: #1e1e1e;
+  margin: 0 100px;
+  border-radius: 30px;
+  height: 500px;
+}
+
+#div-input {
+  text-align: center;
+  padding: 50px;
+}
+
+#mostrarImagens {
+  margin: 0 50px 50px;
+}
+
+#botao-download{
+  background-color: #393840;
+  border: 3px solid #D9D9D9;
+  color: #D9D9D9;
+  padding: 10px 40px;
+  border-radius: 50px;
+  font-size: 25px;
+  margin: 80px 0 0 0;
+}
+
+#botao-download:hover{
+  cursor: pointer;
+  background-color: #46484E;
+  font-size: 30px;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  background-color: #46484E;
+  padding: 10px 0;
+  margin-top: 50px;
+}
+
+/* PERSONALIZAÇÃO - PRINT */
+@media print{
+  footer{
+    display: none;
   }
+  
+  #botao-download, #section-img{
+    display: none;
+  }
+}
