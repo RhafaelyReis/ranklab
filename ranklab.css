@@ -122,13 +122,13 @@ main{
   border-radius: 50px;
   font-size: 25px;
   margin: 80px 0 0 0;
+  transition-duration: 0.5s;
 }
 
 #botao-download:hover{
   cursor: pointer;
   background-color: #46484E;
   font-size: 30px;
-  transition-duration: 0.5s;
 }
 
 /* FOOTER */
