@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RankLab</title>
+
     <link rel="stylesheet" href="ranklab.css">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Titan+One&family=Tomorrow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -12,10 +14,13 @@
 <body>
 
     <header>
-        <img src="img/logo-branco.png" alt="" id="logo">
+        <a href="index.html">
+            <img src="img/logo-branco.png" alt="" id="logo">
+        </a>
     </header>
 
     <main>
+        <!-- SEÇÃO DO RANK (TITULO E NÍVEIS)-->
         <section id="section-rank">
             <input type="text" id="titulo-rank" class="titan-one-regular" value="Titulo (clique para editar)">
 
@@ -43,9 +48,9 @@
                 <textarea class="textarea-titulo titan-one-regular" style="background-color: #75e437;">d</textarea>
                 <div class="div-img"></div>
             </div>                    
-                
         </section>
 
+        <!-- SEÇÃO DE UPLOAD E AMOSTRA DAS IMAGENS -->
         <section id="section-img">
             <p id="titulo-img" class="titan-one-regular">Suas imagens</p>
             <div id="div-imagem">
@@ -58,6 +63,7 @@
             </div>    
         </section>
 
+        <!-- BOTÃO DOWNLOAD DO PDF DO RANK -->
         <button id="botao-download" class="titan-one-regular" onclick="downloadRank()">Baixar meu rank</button>
 
     </main>
@@ -67,6 +73,8 @@
     </footer>
 
     <script>
+
+        /*INSERIR E MOSTRAR IMAGENS*/
         const divsImg = document.querySelectorAll(".div-img");
         const mostrarImagens = document.getElementById("mostrarImagens");
 
@@ -89,6 +97,7 @@
             }
         }
 
+        /*FUNÇÕES DRAG & DROP*/
         function allowDrop(event){
             event.preventDefault();
         }
@@ -113,6 +122,7 @@
             div.ondrop = drop;
         });
 
+        /*FUNÇÃO DE DOWNLOAD DO PDF DO RANK*/
         function downloadRank(){
             window.print();
         }

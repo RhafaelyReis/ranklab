@@ -18,41 +18,42 @@
 }
 
 /* CONFIGURAÇÕES GERAIS */
-body{
+body {
   margin: 0;
   background-color: #393840;
   color: #D9D9D9;
 }
 
 /* HEADER */
-#logo{
-  width: 150px;
-  margin: 30px 0;
-}
-header{
+header {
   text-align: center;
 }
 
+#logo {
+  width: 150px;
+  margin: 30px 0;
+}
+
 /* MAIN */
-#section-principal{
+#section-principal {
   text-align: center;
   margin: 80px;
 }
 
-#txt-principal{
+#txt-principal {
   color: white;
   font-size: 65px;
   padding: 0 50px;
   margin-bottom: 0;
 }
 
-#txt-secundario{
-  margin: 5px 0px 80px 0px;
+#txt-secundario {
+  margin: 5px 0 80px 0;
   font-size: 35px;
   padding: 0 100px;
 }
 
-button{
+button {
   background-color: #393840;
   color: #D9D9D9;
   border: 5px solid #D9D9D9;
@@ -62,13 +63,13 @@ button{
   transition-duration: 0.5s;
 }
 
-button:hover{
+button:hover {
   cursor: pointer;
   background-color: #46484E;
   font-size: 35px;
 }
 
-#passo-a-passo{
+#passo-a-passo {
   width: 100%;
   max-width: calc(100% - 300px);
   margin: 150px;
@@ -76,8 +77,8 @@ button:hover{
 }
 
 /* FOOTER */
-footer{
+footer {
   text-align: center;
   background-color: #46484E;
-  padding: 10px 0; 
+  padding: 10px 0;
 }
