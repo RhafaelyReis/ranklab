@@ -19,4 +19,4 @@ Desenvolvido como projeto para a disciplina de **Criação de Páginas Web II**,
 4. Arraste e organize os itens nos níveis.  
 
 ## Demonstração  
-[Link para o site](https://rhafaelyreis.github.io/ranklab/)
+[Visite o RankLab](https://rhafaelyreis.github.io/ranklab/)
