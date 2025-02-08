@@ -1,21 +1,26 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RankLab</title>
 
-    <link rel="stylesheet" href="ranklab.css">
+    <link rel="stylesheet" href="src/style/ranklab.css">
+    <link rel="stylesheet" href="src/style/main.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Titan+One&family=Tomorrow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Titan+One&family=Tomorrow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
 
     <header>
         <a href="index.html">
-            <img src="img/logo-branco.png" alt="" id="logo">
+            <img src="src/img/logo-branco.png" alt="" id="logo">
         </a>
     </header>
 
@@ -28,26 +33,26 @@
                 <textarea class="textarea-titulo titan-one-regular" style="background-color: #ff0000;">s</textarea>
                 <div class="div-img"></div>
             </div>
-        
+
             <div class="div-geral">
                 <textarea class="textarea-titulo titan-one-regular" style="background-color: #ff6200;">a</textarea>
                 <div class="div-img"></div>
             </div>
-        
+
             <div class="div-geral">
                 <textarea class="textarea-titulo titan-one-regular" style="background-color: #ffa900;">b</textarea>
                 <div class="div-img"></div>
             </div>
-        
+
             <div class="div-geral">
                 <textarea class="textarea-titulo titan-one-regular" style="background-color: #feff00;">c</textarea>
                 <div class="div-img"></div>
             </div>
-        
+
             <div class="div-geral">
                 <textarea class="textarea-titulo titan-one-regular" style="background-color: #75e437;">d</textarea>
                 <div class="div-img"></div>
-            </div>                    
+            </div>
         </section>
 
         <!-- SEÇÃO DE UPLOAD E AMOSTRA DAS IMAGENS -->
@@ -56,77 +61,22 @@
             <div id="div-imagem">
                 <div id="div-input">
                     <input type="file" id="img" name="img" accept="image/*" multiple>
+                    <br>
                     <button type="button" onclick="inserirImagens()">Inserir</button>
                 </div>
 
                 <div id="mostrarImagens"></div>
-            </div>    
+            </div>
         </section>
 
         <!-- BOTÃO DOWNLOAD DO PDF DO RANK -->
         <button id="botao-download" class="titan-one-regular" onclick="downloadRank()">Baixar meu rank</button>
+        <button id="botao-limpar" class="titan-one-regular" onclick="limparRank()">Limpar rank</button>
 
     </main>
 
-    <footer>
-        <p class="tomorrow-light">RankLab | Todos os direitos reservados.</p>
-    </footer>
+    <script src="src/script/script.js"></script>
 
-    <script>
-
-        /*INSERIR E MOSTRAR IMAGENS*/
-        const divsImg = document.querySelectorAll(".div-img");
-        const mostrarImagens = document.getElementById("mostrarImagens");
-
-        function inserirImagens(){
-            const inputFile = document.getElementById("img");
-            const files = inputFile.files;
-
-            if(files.length > 0){
-                for (let i = 0; i < files.length; i++) {
-                    const file = files[i];
-                    const imagemURL = URL.createObjectURL(file);
-                    const imagemID = 'img' + new Date().getTime() + i;
-
-                    mostrarImagens.innerHTML += `<img draggable="true" ondragstart="drag(event)" id="${imagemID}" src="${imagemURL}" style="width: 100px; height: 100px; margin: 2px 5px">`
-                }
-                
-                inputFile.value = '';
-            } else {
-                alert("Nenhuma imagem foi selecionada.")
-            }
-        }
-
-        /*FUNÇÕES DRAG & DROP*/
-        function allowDrop(event){
-            event.preventDefault();
-        }
-
-        function drag(event){
-            event.dataTransfer.setData("text", event.target.id);
-        }
-
-        function drop(event){
-            const idImagem = event.dataTransfer.getData("text");
-            const imagem = document.getElementById(idImagem);
-
-            if (imagem && event.target.classList.contains('div-img')) {
-                event.target.appendChild(imagem);
-                event.target.style.display = 'flex';
-                event.target.style.flexWrap = 'wrap';
-            }
-        }
-
-        divsImg.forEach(div => {
-            div.ondragover = allowDrop;
-            div.ondrop = drop;
-        });
-
-        /*FUNÇÃO DE DOWNLOAD DO PDF DO RANK*/
-        function downloadRank(){
-            window.print();
-        }
-    </script>
-    
 </body>
+
 </html>

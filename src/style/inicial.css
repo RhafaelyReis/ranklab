@@ -1,0 +1,60 @@
+/* MAIN */
+#section-principal {
+  text-align: center;
+}
+
+#txt-principal {
+  color: white;
+  font-size: 65px;
+  padding: 0 50px;
+  margin-bottom: 0;
+}
+
+#txt-secundario {
+  margin: 5px 0 20px 0;
+  font-size: 35px;
+  padding: 0 100px;
+}
+
+main {
+  text-align: center;
+}
+
+#passo-a-passo {
+  width: 80%;
+  margin: 150px 0;
+
+}
+
+
+@media (max-width: 1025px){
+  #txt-principal{
+    font-size: 45px;
+    padding: 0 20px;
+  }
+
+  #txt-secundario {
+    font-size: 30px;
+    margin: 5px 0;
+    padding: 0 20px;
+  }
+
+  #passo-a-passo {
+    margin-bottom: 300px;
+    width: 95%;
+  }
+}
+
+@media (max-width: 550px){
+  #txt-principal{
+    font-size: 35px;
+  }
+
+  #txt-secundario {
+    font-size: 20px;
+  }
+
+  #passo-a-passo {
+    display: none;
+  }
+}

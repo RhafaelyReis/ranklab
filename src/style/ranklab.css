@@ -1,0 +1,97 @@
+/* MAIN */
+main {
+  text-align: center;
+  margin-bottom: 150px;
+}
+
+  /* SECTION - RANK */
+  #section-rank {
+    text-align: center;
+    padding: 0 20px;
+  }
+
+  #titulo-rank {
+    color: white;
+    font-size: 45px;
+    margin-bottom: 30px;
+    background-color: #393840;
+    border: none;
+    text-align: center;
+  }
+
+  .div-geral {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+
+  .div-img {
+    background-color: #1e1e1e;
+    flex-grow: 1;
+    max-width: calc(100% - 160px);
+    margin: 5px 80px 5px 0;
+    border-radius: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 80px;
+    padding: 10px;
+  }
+
+  .textarea-titulo {
+    color: #1e1e1e;
+    align-content: center;
+    text-align: center;
+    width: 100px;
+    border-radius: 20px;
+    border: none;
+    padding: 10px;
+    font-size: 20px;
+    margin: 5px 0 5px 80px;
+    resize: vertical;
+    overflow: hidden;
+    display: block;
+  }
+
+  /* SECTION - IMAGENS */
+  #titulo-img {
+    color: white;
+    font-size: 45px;
+    padding: 0 20px;
+    margin: 80px 0 20px 0;
+    text-align: center;
+  }
+
+  #div-imagem {
+    background-color: #1e1e1e;
+    margin: 0 100px;
+    border-radius: 30px;
+    height: 500px;
+  }
+
+  #div-input {
+    text-align: center;
+    padding: 50px;
+  }
+
+  #mostrarImagens {
+    margin: 0 50px 50px;
+  }
+
+@media (max-width: 780px) {
+  #titulo-rank, #titulo-img {
+    font-size: 30px;
+  }
+
+  .textarea-titulo {
+    font-size: 15px;
+  }
+}
+
+/* PERSONALIZAÇÃO - PRINT */
+@media print {
+  #botao-download, #botao-limpar, #section-img {
+    display: none;
+  }
+}
